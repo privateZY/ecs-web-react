@@ -1,0 +1,1 @@
+export { getQueries } from "./getQueries";

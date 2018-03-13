@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# build dir
+public/build
+public/index.html
+
