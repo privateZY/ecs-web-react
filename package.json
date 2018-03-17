@@ -1,8 +1,8 @@
 {
     "scripts": {
-        "dev": "node server.js",
-        "dev:prod": "node server.js dist",
-        "dist": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
+        "start": "node server.js",
+        "start:prod": "node server.js dist",
+        "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
         "precommit": "lint-staged"
     },
     "lint-staged": {

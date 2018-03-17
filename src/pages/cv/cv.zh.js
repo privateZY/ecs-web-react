@@ -27,6 +27,7 @@ import {
     SkillTypeIcon,
     FlexContainer,
     TimeLineContainer,
+    TimeLineIcon,
     TimeLineSelection,
     TimeLineSelectionDescription,
     TimeLineSelectionName,
@@ -353,7 +354,7 @@ export default class CVZH extends Component {
 
                 <SelectionTitle style={{ marginBottom: 35 }}>Experience 工作经验</SelectionTitle>
                 <TimeLineContainer>
-                    <Icon className="icon-work-experience timelineIcon" />
+                    <TimeLineIcon className="icon-work-experience" />
 
                     <TimeLineSelection>
                         <Card style={{ width: "100%" }}>
@@ -537,7 +538,7 @@ export default class CVZH extends Component {
                 <SelectionTitle style={{ marginBottom: 35 }}>Education 教育</SelectionTitle>
 
                 <TimeLineContainer>
-                    <Icon className="icon-school timelineIcon" />
+                    <TimeLineIcon className="icon-school" />
                     <TimeLineSelection>
                         <Card style={{ width: "100%" }}>
                             <TimeLineSelectionName>爱尔兰都柏林理工学院</TimeLineSelectionName>
