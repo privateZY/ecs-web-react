@@ -7,7 +7,7 @@ import {ToastContainer} from 'react-toastify';
 import "./css";
 import rootStore from "./stores";
 import Login from "./pages/login";
-
+import CV from "./pages/cv";
 useStrict(true);
 
 @inject("store")
@@ -45,6 +45,7 @@ class App extends Component {
 				<Provider store={rootStore}>
 					<Switch>
 						<Route path="/login" exact component={Login}/>
+						<Route path={ "/cv" } exact component={ CV }/>
 						<Route path={"/"} component={Auth}/>
 					</Switch>
 				</Provider>

@@ -14,8 +14,8 @@ module.exports = {
 	
 	output: {
 		path: path.resolve(__dirname, "public"),
-		filename: "build/[name].js",
-		chunkFilename: "build/[name].bundle.js",
+		filename: "build/[name].[hash].js",
+		chunkFilename: "build/[name].[hash].bundle.js",
 		publicPath: "/"
 	},
 	
@@ -55,10 +55,14 @@ module.exports = {
 		new CleanWebpackPlugin([path.resolve(__dirname, "public/build")]),
 		new HtmlWebpackPlugin({
 			filename: path.resolve(__dirname, "public/index.html"),
-			template: path.resolve(__dirname, "index.ejs")
+			template: path.resolve(__dirname, "index.ejs"),
+			createTime: new Date().toDateString()
 		}),
 		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify('production')
+			'process.env.NODE_ENV': JSON.stringify('production'),
+			"api": {
+				SERVER: JSON.stringify("http://api.beaf.tech")
+			}
 		}),
 		new webpack.NoEmitOnErrorsPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
