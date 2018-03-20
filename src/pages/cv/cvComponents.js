@@ -18,6 +18,8 @@ export const Avatar = styled.img`
     height: 130px;
     position: relative;
     z-index: 150;
+    user-select: none;
+    box-shadow: 0 4px 4px 1px #c1c1c1;
 `;
 
 export const Name = styled.h1`

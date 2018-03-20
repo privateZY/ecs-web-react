@@ -16,7 +16,8 @@ module.exports = {
         "react-motion",
         "styled-components",
         "react-router-dom",
-        "react-toastify"
+        "react-toastify",
+        "moment"
     ],
     resolve: {
         modules: ["node_modules", path.resolve(__dirname, "src")],
@@ -55,6 +56,7 @@ module.exports = {
         })
     ],
     commonChunks: [
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor",
             minChunks: Infinity

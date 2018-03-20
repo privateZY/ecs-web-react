@@ -92,7 +92,7 @@ export default class CVZH extends Component {
         return (
             <CvWrap>
                 <div style={{ textAlign: "center" }}>
-                    <Avatar src="/img/cv-photo.jpg" />
+                    <Avatar src="/img/cv-photo.jpg" draggable={false} />
                     <Name>张&nbsp;&nbsp;&nbsp;&nbsp;庆</Name>
                     <Job>前端开发 Front-end Developer</Job>
 
