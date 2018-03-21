@@ -1,8 +1,8 @@
 import React, { Component, PureComponent, Fragment } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { TransitionMotion, spring, presets } from "react-motion";
-
+import { Link } from "react-router-dom";
 const LoginForm = styled.div`
     position: absolute;
     left: 50%;
@@ -77,6 +77,42 @@ const Password = styled.input.attrs({
     }
 `;
 
+const ContactList = styled.div`
+    text-align: center;
+    margin: 0 -10px;
+`;
+
+const LinkStyle = css`
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #1890ff;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.3s;
+    &:focus {
+        background-color: #40a9ff;
+    }
+
+    &:hover {
+        background-color: #40a9ff;
+        transform: scale(1.4);
+    }
+`;
+
+const ContactHref = styled.a`
+    ${LinkStyle};
+`;
+
+const ContactLink = styled(Link)`
+    ${LinkStyle};
+`;
+
 export default class UserForm extends PureComponent {
     static propTypes = {
         visible: PropTypes.bool
@@ -109,6 +145,26 @@ export default class UserForm extends PureComponent {
                 );
             case "password":
                 return <Password key={key} placeholder={"PIN码"} style={currentStyle} />;
+            case "contact":
+                return (
+                    <ContactList key={key} style={currentStyle}>
+                        <ContactLink to={"/cv"}>
+                            <i className={"iconfont icon-resume"} />
+                        </ContactLink>
+
+                        <ContactHref href="mailto:zhangqing332@live.com" target="_blank">
+                            <i className={"iconfont icon-email"} />
+                        </ContactHref>
+
+                        <ContactHref href="http://github.com/JennerChen" target="_blank">
+                            <i className={"iconfont icon-github"} />
+                        </ContactHref>
+
+                        <ContactHref href="https://cn.linkedin.com/in/zhangqing332" target="_blank">
+                            <i className={"iconfont icon-linkedin"} />
+                        </ContactHref>
+                    </ContactList>
+                );
         }
     }
 
@@ -118,7 +174,7 @@ export default class UserForm extends PureComponent {
             y: 0,
             opacity: 0
         };
-        const defaultStyles = ["avatar", "name", "title", "password"].map(key => ({
+        const defaultStyles = ["avatar", "name", "title", "password", "contact"].map(key => ({
             key,
             style: spingStyle
         }));
@@ -131,7 +187,7 @@ export default class UserForm extends PureComponent {
                         style:
                             i === 0
                                 ? {
-                                      y: spring(visible ? -100 : 0, presets.stiff),
+                                      y: spring(visible ? -80 : 0, presets.stiff),
                                       opacity: spring(visible ? 1 : 0, presets.stiff)
                                   }
                                 : {
