@@ -80,6 +80,14 @@ const Password = styled.input.attrs({
 const ContactList = styled.div`
     text-align: center;
     margin: 0 -10px;
+
+    ${props =>
+        props.disabled
+            ? css`
+                  pointer-events: none;
+                  user-select: none;
+              `
+            : ""};
 `;
 
 const LinkStyle = css`
@@ -122,7 +130,7 @@ export default class UserForm extends PureComponent {
         visible: false
     };
 
-    renderComponent({ key, style }) {
+    renderComponent = ({ key, style }) => {
         const currentStyle = {
             transform: `translateY(${style.y}px)`,
             opacity: style.opacity
@@ -147,7 +155,7 @@ export default class UserForm extends PureComponent {
                 return <Password key={key} placeholder={"PIN码"} style={currentStyle} />;
             case "contact":
                 return (
-                    <ContactList key={key} style={currentStyle}>
+                    <ContactList key={key} style={currentStyle} disabled={!this.props.visible}>
                         <ContactLink to={"/cv"}>
                             <i className={"iconfont icon-resume"} />
                         </ContactLink>
@@ -166,7 +174,7 @@ export default class UserForm extends PureComponent {
                     </ContactList>
                 );
         }
-    }
+    };
 
     render() {
         const { visible } = this.props;

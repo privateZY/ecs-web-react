@@ -41,7 +41,7 @@ module.exports = {
                     loader: "url-loader",
                     options: {
                         limit: 8192,
-                        name: "build/[hash:8].[name].[ext]"
+                        name: "build/img/[hash:8].[name].[ext]"
                     }
                 }
             ]
