@@ -555,7 +555,7 @@ export default class CVZH extends Component {
                             <img
                                 width={80}
                                 style={{ position: "absolute", top: 25, right: 25 }}
-                                src="http://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_100_100/p/1/005/011/0b2/16b983d.png"
+                                src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAMAAgQIAAkAAQAAAAAAABGOAAAAJDAyNWU5ZTkxLTJiZDMtNDY1Yi1hYjZlLTUzMjk0NzlmMzBiNQ.bin"
                             />
                         </Card>
                     </TimeLineSelection>
@@ -575,7 +575,7 @@ export default class CVZH extends Component {
                             <img
                                 width={80}
                                 style={{ position: "absolute", top: 25, right: 25 }}
-                                src="http://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_100_100/p/5/005/010/0a9/311503b.png"
+                                src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAMAAQQIAAkAAQAAAAAAABBrAAAAJDU3ZmZkN2Q4LWQyOWUtNGVjNC1hYjg0LTRkMWNhZGNjOGEyOQ.bin"
                             />
                         </Card>
                     </TimeLineSelection>
@@ -593,7 +593,7 @@ export default class CVZH extends Component {
                             <img
                                 width={80}
                                 style={{ position: "absolute", top: 25, right: 25 }}
-                                src="http://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_100_100/p/3/005/0ad/16d/17e00a5.png"
+                                src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAMAAwQIAAkAAQAAAAAAAA5dAAAAJDRiNzZkMzQzLTE4YmItNDg3MS1iNmRlLTYzZjIxOGYxOWEzOQ.bin"
                             />
                         </Card>
                     </TimeLineSelection>
