@@ -9,6 +9,7 @@
         "*.{js,json,css,md}": ["prettier --write", "git add"]
     },
     "dependencies": {
+        "ali-oss": "^5.0.0",
         "axios": "^0.18.0",
         "file-loader": "^1.1.11",
         "invariant": "^2.2.3",
