@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { inject, observer } from "mobx-react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import "particles.js";
+import  "particles.js";
 import CVZH from "./cv.zh";
 import CVEN from "./cv.en";
 
@@ -141,7 +141,7 @@ const particleConfig = {
 @observer
 export default class CV extends React.Component {
     componentDidMount() {
-        particlesJS("particles-js", particleConfig);
+      window.particlesJS("particles-js", particleConfig);
     }
 
     render() {

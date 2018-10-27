@@ -1,4 +1,4 @@
-import { computed, action, observable } from "mobx";
+import { action, observable } from "mobx";
 import { UserStore } from "./user/UserStore";
 import NProgress from "nprogress";
 import axios from "axios";
@@ -9,7 +9,7 @@ class Root {
     @observable version = 1;
 
     /** @type { String } */
-    api = api.SERVER;
+    api = "http://127.0.0.1:4567";
 
     constructor() {
         this.initReq();

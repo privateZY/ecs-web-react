@@ -2,8 +2,7 @@ import React, { Component, Fragment } from "react";
 import styled, { keyframes } from "styled-components";
 import moment from "moment";
 import UserForm from "./UserForm";
-import previewImg from "../../../public/img/homeBgPreview.jpg";
-import largeImg from "../../../public/img/homeBg.jpg";
+
 const FadeOut = keyframes`
 	from{
 		transform: translateY(0);
@@ -42,7 +41,7 @@ const Bg = styled.div.attrs({
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(${props => (props.image ? props.image : previewImg)});
+    background-image: url(${props => (props.image ? props.image : "/img/homeBgPreview.jpg")});
     filter: grayscale(${props => (props.image ? 0 : 1)});
     transition: opacity, filter 1s, 0.5s;
     overflow: hidden;
@@ -112,11 +111,11 @@ export default class extends Component {
 
         this.img.onload = () => {
             this.setState({
-                bgImg: largeImg
+                bgImg: "/img/homeBg.jpg"
             });
         };
 
-        this.img.src = largeImg;
+        this.img.src = "/img/homeBg.jpg";
     }
 
     componentDidMount() {
